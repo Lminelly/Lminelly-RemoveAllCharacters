@@ -12,6 +12,8 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        String escapedCh = ch.replaceAll("[\\[\\\\.^$|?*+(){}]", "\\\\$0");
+        return str.replaceAll(escapedCh, "");
     }
-}
+    
+    }
